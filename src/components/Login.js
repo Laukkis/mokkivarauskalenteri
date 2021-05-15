@@ -49,15 +49,6 @@ const Login = () => {
           <Button className="Button" type="submit">
             Kirjaudu
           </Button>
-          <p
-            style={{ fontSize: "13px", fontWeight: "600" }}
-            onClick={() => {
-              const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-              firebase.auth().signInWithPopup(googleAuthProvider);
-            }}
-          >
-            Kirjaudu Google tilillä
-          </p>
         </Form>
       </Container>
     </div>

@@ -1,14 +1,7 @@
-.Login {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  color: #fff;
+p {
+  font-weight: 450;
 }
-.App {
-  background-color: #2f2e4d;
-}
-.navbar-toggler-icon {
-  background-image: url("");
-}
+
 .Button {
   border-radius: 20px !important;
   border: 1px solid #fc216e !important;
@@ -28,6 +21,27 @@
 .Button:focus {
   outline: none;
 }
+#bookingButton {
+  margin-top: 2vh !important;
+}
+.breadcrumb {
+  background-color: transparent;
+  color: #fc216e;
+}
+.Calendar {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-image: url(../images/front_image.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fc216e;
+}
+.Calendar h1 {
+  padding-top: 10vh;
+}
+.Form {
+  padding-top: 2vh;
+}
 .input {
   background-color: #f2f6fc !important;
   border: none !important;
@@ -35,25 +49,21 @@
   margin: 8px 0 !important;
   width: 100% !important;
 }
-.Form {
-  padding-top: 2vh;
-}
-#nav {
-  color: #fff
-}
-.navbar-brand {
-  color: #fff !important;
-}
-.navbar-toggler-icon {
-  background-image: url("");
-}
-.Calendar {
-  color: #fff;
+.Login {
   padding-top: 5vh;
+  padding-bottom: 5vh;
+  color: #fc216e;
+  background-image: url(../images/front_image.jpg);
+}
+#ownReservations {
+  padding-bottom: 5vh;
 }
 .react-calendar {
   margin-top: 2vh;
+  padding-bottom: 2vh;
   border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
 }
 .react-calendar__tile--active {
   border-radius: 50%;
@@ -66,10 +76,36 @@
   padding-bottom: 2vh;
   padding-left: 2vh;
   background-color: #fff;
-  color: black;
+  background-image: url(../images/card_image.jpg);
+  background-position: center;
+  background-size: cover;
+  size: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: #fff;
   width: 100%;
   border-radius: 8px;
+  margin-bottom: 2vh;
+}
+.Reservations:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+  size: 110%;
 }
 .Reservations-Container {
+  padding-top: 5vh;
+}
+#ReservationScreen {
+  background-image: url(../images/front_image.jpg);
+  background-position: center;
+  background-size: cover;
   padding-top: 2vh;
+  padding-bottom: 10vh;
+  text-align: center;
+  color: #fc216e;
+}
+#ReservationScreen h1 {
+  padding-top: 5vh;
+}
+#Reservation-Info {
+  padding-top: 10vh;
 }

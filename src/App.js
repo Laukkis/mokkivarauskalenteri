@@ -1,5 +1,6 @@
 import { config } from "./config/config.js";
 import Dashboard from "./screens/Dashboard.js";
+import Reservations from "./screens/reservations.js";
 import PrivateRoute from "./components/PrivateRoute";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,19 +25,18 @@ function App() {
       <div className="App">
         <FirebaseAuthProvider {...config} firebase={firebase}>
           <Router>
-            <Route exact path="/login">
+            <Route exact path="/">
               <Header />
               <Login />
             </Route>
             <IfFirebaseAuthed>
-              <Redirect
-                to={{
-                  pathname: "/dashboard",
-                }}
-              />
               <PrivateRoute path="/dashboard" component={Dashboard}>
                 <AuthHeader />
                 <Dashboard />
+              </PrivateRoute>
+              <PrivateRoute path="/varaukset" component={Reservations}>
+                <AuthHeader />
+                <Reservations />
               </PrivateRoute>
             </IfFirebaseAuthed>
           </Router>

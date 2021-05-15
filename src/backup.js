@@ -67,3 +67,26 @@ data.docs.forEach((item) => {
   setDates([...dates, item.data()]);
   console.log(dates);
 });
+
+{
+  dates.map(dates, (i) => {
+    <p>{dates.userName}</p>;
+  });
+}
+
+function Reservations(props) {
+  return <p>Varaus</p>;
+}
+
+function NoReservations(props) {
+  return <p>Ei varauksia</p>;
+}
+function ReservationsText(props) {
+  if (reservations.length === 0) {
+    return <Reservations />;
+  }
+  return <NoReservations />;
+}
+
+reservations.push(data);
+console.log(reservations);
