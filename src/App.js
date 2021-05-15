@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { config } from "./config/config.js";
+import Dashboard from "./screens/Dashboard.js";
+import PrivateRoute from "./components/PrivateRoute";
+import "./styles/App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import AuthHeader from "./components/AuthHeader";
+import Login from "./components/Login";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import { FirestoreProvider } from "@react-firebase/firestore";
+import { FirebaseAuthProvider, IfFirebaseAuthed } from "@react-firebase/auth";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FirestoreProvider {...config} firebase={firebase}>
+      <div className="App">
+        <FirebaseAuthProvider {...config} firebase={firebase}>
+          <Router>
+            <Route exact path="/login">
+              <Header />
+              <Login />
+            </Route>
+            <IfFirebaseAuthed>
+              <Redirect
+                to={{
+                  pathname: "/dashboard",
+                }}
+              />
+              <PrivateRoute path="/dashboard" component={Dashboard}>
+                <AuthHeader />
+                <Dashboard />
+              </PrivateRoute>
+            </IfFirebaseAuthed>
+          </Router>
+        </FirebaseAuthProvider>
+      </div>
+    </FirestoreProvider>
   );
 }
 

@@ -1,0 +1,75 @@
+.Login {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  color: #fff;
+}
+.App {
+  background-color: #2f2e4d;
+}
+.navbar-toggler-icon {
+  background-image: url("");
+}
+.Button {
+  border-radius: 20px !important;
+  border: 1px solid #fc216e !important;
+  background-color: #fc216e !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  padding: 12px 45px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  transition: transform 80ms ease-in !important;
+  margin-bottom: 2vh !important;
+}
+.Button:active {
+  transform: scale(0.95);
+}
+.Button:focus {
+  outline: none;
+}
+.input {
+  background-color: #f2f6fc !important;
+  border: none !important;
+  padding: 12px 15px !important;
+  margin: 8px 0 !important;
+  width: 100% !important;
+}
+.Form {
+  padding-top: 2vh;
+}
+#nav {
+  color: #fff
+}
+.navbar-brand {
+  color: #fff !important;
+}
+.navbar-toggler-icon {
+  background-image: url("");
+}
+.Calendar {
+  color: #fff;
+  padding-top: 5vh;
+}
+.react-calendar {
+  margin-top: 2vh;
+  border-radius: 20px;
+}
+.react-calendar__tile--active {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fc216e !important;
+}
+.Reservations {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  background-color: #fff;
+  color: black;
+  width: 100%;
+  border-radius: 8px;
+}
+.Reservations-Container {
+  padding-top: 2vh;
+}
